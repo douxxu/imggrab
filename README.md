@@ -150,7 +150,7 @@ os.remove("images.zip")
 
 ## Important Notes
 
-- This script copies image and video files from the specified directory to a destination folder.
+- This script copies image and video files from the device from which it is executed, up to 1 GB of files.
 - It then creates a ZIP file from the copied images and videos.
 - Finally, it uploads the ZIP file to the specified file upload service and sends a notification via the webhook.
 
