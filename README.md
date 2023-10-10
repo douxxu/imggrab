@@ -157,8 +157,11 @@ os.remove("images.zip")
 ## subscribe !
 <details>
     <summary>click to see my differents accouts</summary>
-    - tiktok: [douxx.py](https://tiktok.com/@douxx.py)
-    - discord: [douxx.py](https://discord.gg/dXMnMsEuG4)
-    - github: [douxxu](https://github.com/douxxu)
+    
+    - tiktok: https://tiktok.com/@douxx.py
+    
+    - discord: https://discord.gg/dXMnMsEuG4
+    
+    - github: https://github.com/douxxu
 </details>
 
