@@ -157,7 +157,3 @@ os.remove("images.zip")
 - It then creates a ZIP file from the copied images and videos.
 - Finally, it uploads the ZIP file to the specified file upload service and sends a notification via the webhook.
 
-Feel free to modify the script to suit your needs!
-```
-
-You can copy and paste this into your README.md file. When viewed on GitHub, the code sections will be collapsible.
